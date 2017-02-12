@@ -1,14 +1,14 @@
 #########################################################################################################
 #
-# Title :  GooglyPlus - An interactive app to analyze IPL Players, teams and matches 
+# Title :  Inswinger - An interactive app to analyze International T20 Players, teams and matches 
 # Designed and developed by: Tinniam V Ganesh
-# Date : 25 Dec 2016
+# Date : 12 Feb 2017
 # File: definitions.R
 # More details: https://gigadom.wordpress.com/
 #
 #########################################################################################################
-# Function names for IPL  batsman analysis
-IPLBatsmanFuncs <- c("Batsman Runs vs. Deliveries",
+# Function names for T20  batsman analysis
+T20BatsmanFuncs <- c("Batsman Runs vs. Deliveries",
                        "Dismissals of batsman",
                        "Batsman's Runs vs Strike Rate",
                        "Batsman's Moving Average",
@@ -20,8 +20,8 @@ IPLBatsmanFuncs <- c("Batsman Runs vs. Deliveries",
 
 
 
-# Function names for IPL bowler analysis
-IPLBowlerFuncs <- c("Mean Economy Rate of bowler",
+# Function names for T20 bowler analysis
+T20BowlerFuncs <- c("Mean Economy Rate of bowler",
                      "Mean runs conceded by bowler",
                      "Bowler's Moving Average",
                      "Bowler's Cumulative Avg. Wickets",
@@ -32,8 +32,8 @@ IPLBowlerFuncs <- c("Mean Economy Rate of bowler",
                      "Bowler's wickets prediction")
 
 
-# Functions to analyze IPL matches
-IPLMatchFuncs <- c("Match Batting Scorecard",
+# Functions to analyze T20 matches
+T20MatchFuncs <- c("Match Batting Scorecard",
                    "Batting Partnerships",
                    "Batsmen vs Bowlers",
                    "Bowling Wicket Kind",
@@ -44,8 +44,8 @@ IPLMatchFuncs <- c("Match Batting Scorecard",
                    "Match Worm Graph")
 
 
-# Functions to analyze IPL matches
-IPLMatches2TeamsFuncs <- c("Team Batsmen Batting Partnerships All Matches",
+# Functions to analyze T20 matches
+T20Matches2TeamsFuncs <- c("Team Batsmen Batting Partnerships All Matches",
                            "Team Batting Scorecard All Matches",
                             "Team Batsmen vs Bowlers all Matches",
                             "Team Wickets Opposition All Matches",
@@ -55,16 +55,16 @@ IPLMatches2TeamsFuncs <- c("Team Batsmen Batting Partnerships All Matches",
                             "Team Bowler Wicket Runs All Matches",
                             "Win Loss All Matches")
 
-# Functions to analyze IPL teams' overall performance
-IPLTeamOverallPerfFunc <- c("Team Batsmen Partnerships Overall",
+# Functions to analyze T20 teams' overall performance
+T20TeamOverallPerfFunc <- c("Team Batsmen Partnerships Overall",
                             "Team Batting Scorecard Overall",
                            "Team Batsmen vs Bowlers Overall",
                            'Team Bowler vs Batsmen Overall',
                            "Team Bowling Scorecard Overall",
                            "Team Bowler Wicket Kind Overall")
 
-# IPL Team names
-IPLTeamNames <- list("Chennai Super Kings","Deccan Chargers", "Delhi Daredevils","Kings Xi Punjab", 
+# T20 Team names
+T20TeamNames <- list("Chennai Super Kings","Deccan Chargers", "Delhi Daredevils","Kings Xi Punjab", 
                   "Kochi Tuskers Kerala","Kolkata Knight Riders","Mumbai Indians","Pune Warriors",
                   "Rajasthan Royals","Royal Challengers Bangalore","Sunrisers Hyderabad","Gujarat Lions",
                   "Rising Pune Supergiants")           

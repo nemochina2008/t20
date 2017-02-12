@@ -3,16 +3,16 @@
 # Title :  Inswinger - An interactive app to analyze International T20 Players, teams and matches 
 # Designed and developed by: Tinniam V Ganesh
 # Date : 12 Feb 2017
-# File: server.R
+# File: analyzeT20Matches.R
 # More details: https://gigadom.wordpress.com/
 #
 #########################################################################################################
-#Analyze an IPL match
-analyzeIPLMatches <- function(match,matchFunc,plotOrTable,team,opposition) {
+#Analyze an T20 match
+analyzeT20Matches <- function(match,matchFunc,plotOrTable,team,opposition) {
 
-    # Check and get the team indices of IPL teams in which the bowler has played
-    IPLmatch <- paste("./IPLmatches/", match,".RData",sep="")
-    load(IPLmatch)
+    # Check and get the team indices of T20 teams in which the bowler has played
+    T20match <- paste("./T20matches/", match,".RData",sep="")
+    load(T20match)
     matchDF <- overs
     
     if(plotOrTable == 1){

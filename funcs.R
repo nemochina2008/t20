@@ -1,13 +1,13 @@
 #########################################################################################################
 #
-# Title :  GooglyPlus - An interactive app to analyze IPL Players, teams and matches 
+# Title :  Inswinger - An interactive app to analyze International T20 Players, teams and matches 
 # Designed and developed by: Tinniam V Ganesh
-# Date : 25 Dec 2016
+# Date : 12 Feb 2017
 # File: funcs.R
 # More details: https://gigadom.wordpress.com/
 #
 #########################################################################################################
-# Get all the IPL batsmen
+# Get all the T20 batsmen
 getBatsmen <- function(df){
     bmen <- df %>% distinct(batsman) 
     bmen <- as.character(bmen$batsman)
@@ -49,30 +49,30 @@ getTeamIndex <- function(batsman){
     b
 }
 
-# Get the list of the IPL team names from the indices passed
+# Get the list of the T20 team names from the indices passed
 getTeams <- function(x){
    
     l <- NULL
     # Get the teams passed in as indexes
     for (i in seq_along(x)){
         
-        l <- c(l, IPLTeamNames[[x[i]]]) 
+        l <- c(l, T20TeamNames[[x[i]]]) 
         
     }
     l
 }
 
 
-# Get all IPL bowlers
+# Get all T20 bowlers
 getBowlers <- function(df){
     bwlr <- df %>% distinct(bowler) 
     bwlr <- as.character(bwlr$bowler)
     bowler <- sort(bwlr)
 }
 
-# Get the team indices of IPL teams for which the bowler as played
+# Get the team indices of T20 teams for which the bowler as played
 getTeamIndex_bowler <- function(bowler){
-    # Load IPL Bowlers
+    # Load T20 Bowlers
     setwd("./data")
     load("csk1.RData")
     load("dc1.RData")

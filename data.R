@@ -1,23 +1,23 @@
 #########################################################################################################
 #
-# Title :  GooglyPlus - An interactive app to analyze IPL Players, teams and matches 
+# Title :  Inswinger - An interactive app to analyze International T20 Players, teams and matches 
 # Designed and developed by: Tinniam V Ganesh
-# Date : 25 Dec 2016
+# Date : 12 Feb 2017
 # File: data.R
 # More details: https://gigadom.wordpress.com/
 #
 #########################################################################################################
-load("./data/batsmen.RData")
-IPLBatsmen <-b
+load("./data/T20Batsmen.RData")
+T20Batsmen <-b
 
-load("./data/bowlers.RData")
-IPLBowlers <-b
+load("./data/T20bowlers.RData")
+T20Bowlers <-b
 
-a <-list.files("IPLmatches/")
-IPLMatches <- gsub(".RData","",a)
+a <-list.files("T20Matches/")
+T20Matches <- gsub(".RData","",a)
 
-a1 <-list.files("IPLMatches2Teams/")
-IPLMatches2Teams <- gsub(".RData","",a1)
+a1 <-list.files("T20Matches2Teams/")
+T20Matches2Teams <- gsub(".RData","",a1)
 
 a2 <-list.files("allMatchesallOppn/")
-IPLTeamsAll <- gsub(".RData","",a2)
+T20TeamsAll <- gsub(".RData","",a2)

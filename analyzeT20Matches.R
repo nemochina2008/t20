@@ -1,9 +1,9 @@
 #########################################################################################################
 #
-# Title :  GooglyPlus - An interactive app to analyze IPL Players, teams and matches 
+# Title :  Inswinger - An interactive app to analyze International T20 Players, teams and matches 
 # Designed and developed by: Tinniam V Ganesh
-# Date : 25 Dec 2016
-# File: analyzeIPLBatsmen.R
+# Date : 12 Feb 2017
+# File: server.R
 # More details: https://gigadom.wordpress.com/
 #
 #########################################################################################################

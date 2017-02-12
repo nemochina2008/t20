@@ -3,7 +3,7 @@
 # Title :  Inswinger - An interactive app to analyze International T20 Players, teams and matches 
 # Designed and developed by: Tinniam V Ganesh
 # Date : 12 Feb 2017
-# File: server.R
+# File: ui.R
 # More details: https://gigadom.wordpress.com/
 #
 #########################################################################################################

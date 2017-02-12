@@ -1,19 +1,19 @@
 #########################################################################################################
 #
-# Title :  GooglyPlus - An interactive app to analyze IPL Players, teams and matches 
+# Title :  Inswinger - An interactive app to analyze International T20 Players, teams and matches 
 # Designed and developed by: Tinniam V Ganesh
-# Date : 25 Dec 2016
-# File: analyzeIPLMatches2Teams.R
+# Date : 12 Feb 2017
+# File: analyzeT20Matches2Teams.R
 # More details: https://gigadom.wordpress.com/
 #
 #########################################################################################################
-#Analyze all IPL matches between 2 IPL teams
-analyzeIPLMatches2Teams <- function(match2,matchFunc,plotOrTable1,repType, team,opposition) {
+#Analyze all T20 matches between 2 T20 teams
+analyzeT20Matches2Teams <- function(match2,matchFunc,plotOrTable1,repType, team,opposition) {
     
-    # Check and get the team indices of IPL teams in which the bowler has played
+    # Check and get the team indices of T20 teams in which the bowler has played
 
-    IPLmatch <- paste("./IPLMatches2Teams/", match2,".RData",sep="")
-    load(IPLmatch)
+    T20match <- paste("./T20Matches2Teams/", match2,".RData",sep="")
+    load(T20match)
     matchesDF <- matches
     
     if(plotOrTable1 == 1){
@@ -56,7 +56,7 @@ analyzeIPLMatches2Teams <- function(match2,matchFunc,plotOrTable1,repType, team,
     } else if (matchFunc == "Team Bowler Wicket Runs All Matches"){
         teamBowlersWicketRunsOppnAllMatches(matchesDF,team,opposition,plot=val1)
     } else if (matchFunc == "Win Loss All Matches"){
-        plotWinLossBetweenTeams(team,opposition,"./IPLmatches")
+        plotWinLossBetweenTeams(team,opposition,"./T20matches")
     }
     
     

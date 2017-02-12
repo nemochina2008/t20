@@ -62,3 +62,23 @@ b$bowler = as.character(b$bowler)
 T20Bowler <- b[order(b$bowler),]
 save(T20Bowler, file="T20Bowlers.RData")
 load("T20Bowlers.RData")
+
+
+#Get batsmen of each country
+setwd("data")
+fl <- dir(".")
+a <- grep("Batting",fl)
+battingV <- fl[a]
+
+# Create a consolidate DF
+df <- NULL
+for(i in seq_along(battingV)){
+    load(battingV[i])
+    # Remove BattingDetals.RData
+    m <- gsub("-BattingDetails.RData","",battingV[i])
+    #Save as batsmen
+    n <- paste(m,"_batsmen",sep="")
+    o <- paste(n,".RData",sep="")
+    n <- getBatsmen(battingDetails)
+    save(n,file=o)
+}

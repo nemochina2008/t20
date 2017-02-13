@@ -64,9 +64,13 @@ T20TeamOverallPerfFunc <- c("Team Batsmen Partnerships Overall",
                            "Team Bowler Wicket Kind Overall")
 
 # T20 Team names
-T20TeamNames <- list("Chennai Super Kings","Deccan Chargers", "Delhi Daredevils","Kings Xi Punjab", 
-                  "Kochi Tuskers Kerala","Kolkata Knight Riders","Mumbai Indians","Pune Warriors",
-                  "Rajasthan Royals","Royal Challengers Bangalore","Sunrisers Hyderabad","Gujarat Lions",
-                  "Rising Pune Supergiants")           
+T20TeamNames <- list("Afghanistan","Australia","Bangladesh","Bermuda","Canada","England",
+                     "Hong Kong"," India","Ireland","Kenya","Nepal","Netherlands","New Zealand",
+                     "Oman","Pakistan","Papua New Guinea","Scotland","South Africa", "Sri Lanka",
+                     "United Arab Emirates", "West Indies","Zimbabwe")           
 
+Country <- list("Afghanistan","Australia","Bangladesh","Bermuda","Canada","England",
+                "Hong Kong","India","Ireland","Kenya","Nepal","Netherlands","New Zealand",
+                "Oman","Pakistan","Papua New Guinea","Scotland","South Africa", "Sri Lanka",
+                "United Arab Emirates", "West Indies","Zimbabwe")        
 

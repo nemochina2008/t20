@@ -17,8 +17,12 @@ shinyUI(navbarPage("Inswinger : yorkr analyzes International T20 with plots and 
                    tabPanel("T20 batsman",
                             h4('Analyze T20 batsman performances'),
                             sidebarPanel(
-                                selectInput('batsmanFunc', 'Select function', T20BatsmanFuncs),
-                                selectInput('batsman', 'Select batsman', T20Batsmen,selectize=FALSE, size=20)
+                                
+                                selectInput('country','Select Country',Country),
+                                uiOutput("selectBatsman"),
+                                #uiOutput("AAA"),
+                                selectInput('batsmanFunc', 'Select function', T20BatsmanFuncs)
+                                #selectInput('batsman', 'Select batsman', batsman,selectize=FALSE, size=20)
                             ),
                             mainPanel(
                                 plotOutput('batsmanPlot'),

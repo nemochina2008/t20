@@ -28,9 +28,22 @@ source('printOrPlotT20Match2Teams.R')
 source('printOrPlotT20TeamPerfOverall.R')
 shinyServer(function(input, output,session) {
     
+    output$selectBatsman <- renderUI({ 
+        
+        print(getwd())
+        country_batsmen <- paste("./data/",input$country,"_batsmen.RData",sep="")
+        print(country_batsmen)
+        load(country_batsmen)
+        batsmen <- n
+        print(batsmen)
+        selectInput('batsman', 'Choose batsman',choices=batsmen,selected=input$batsman)
+        
+    })
+    
+    
     # Analyze and display batsmen plots
     output$batsmanPlot <- renderPlot({  
-        analyzeT20Batsmen(input$batsman,input$batsmanFunc)
+        analyzeT20Batsmen(input$batsman,input$batsmanFunc,input$country)
         
     })
     

@@ -11,26 +11,9 @@
 # Analyze T20 batsmen
 analyzeT20Batsmen <- function(T20Batsman,func,country) {
      print("Hello")
-   print(T20Batsman)
+    print(T20Batsman)
     print(country)
-    #print(T20Batsman)
-    # Return when name is NULL at start
-    #if(is.null(T20Batsman))
-       # return()
-    
-    # Check and get the team indices of T20 teams in which the batsman has played
-    #i <- getTeamIndex(T20Batsman)
-    
-    # Get the team names
-    #teamNames <- getTeams(i)
-    # Check if file exists in the directory. This check is necessary when moving between matchType
-    
-    #batsmanDF <- NULL
-    # Create a consolidated Data frame of batsman for all T20 teams played
-    #for (i in seq_along(teamNames)){
-    #      df <- getBatsmanDetails(team=teamNames[i],name=T20Batsman,dir="./data")
-    #      batsmanDF <- rbind(batsmanDF,df) 
-    #}
+   
     batsmanDF<- getBatsmanDetails(team=country,name=T20Batsman,dir="./data")
     print(dim(batsmanDF))
     # Call the approporiate function

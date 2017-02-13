@@ -8,24 +8,11 @@
 #
 #########################################################################################################
 # Analyze T20 bowlers
-analyzeT20Bowlers <- function(T20Bowler,func) {
+analyzeT20Bowlers <- function(T20Bowler,func,country) {
   
-    # Check and get the team indices of T20 teams in which the bowler has played
-    i <- getTeamIndex_bowler(T20Bowler)
+    bowlerDF<- getBowlerWicketDetails(team=country,name=T20Bowler,dir="./data")
+    print(dim(bowlerDF))
     
-    # Get the team names
-    teamNames <- getTeams(i)
-    # Check if file exists in the directory. This check is necessary when moving between matchType
-    
-    bowlerDF <- NULL
-    
-    # Create a consolidated Data frame of batsman for all T20 teams played
-    for (i in seq_along(teamNames)){
-          df <- getBowlerWicketDetails(team=teamNames[i],name=T20Bowler,dir="./data")
-          bowlerDF <- rbind(bowlerDF,df) 
-        
-    }
- 
     # Call the necessary function
     if(func == "Mean Economy Rate of bowler"){
         bowlerMeanEconomyRate(bowlerDF,T20Bowler)

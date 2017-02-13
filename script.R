@@ -82,3 +82,22 @@ for(i in seq_along(battingV)){
     n <- getBatsmen(battingDetails)
     save(n,file=o)
 }
+
+#Get bowler of each country
+setwd("data")
+fl <- dir(".")
+a <- grep("Bowling",fl)
+bowlingV <- fl[a]
+
+# Create a consolidate DF
+
+for(i in seq_along(bowlingV)){
+    load(bowlingV[i])
+    # Remove BattingDetals.RData
+    m1 <- gsub("-BowlingDetails.RData","",bowlingV[i])
+    #Save as batsmen
+    n1 <- paste(m1,"_bowlers",sep="")
+    o1 <- paste(n1,".RData",sep="")
+    p1 <- getBowlers(bowlingDetails)
+    save(p1,file=o1)
+}

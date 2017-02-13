@@ -48,8 +48,19 @@ shinyServer(function(input, output,session) {
     })
     
     # Analyze and display bowler plots
+    
+    output$selectBowler <- renderUI({ 
+        
+        country_bowlers <- paste("./data/",input$country,"_bowlers.RData",sep="")
+        print(country_bowlers)
+        load(country_bowlers)
+        bowlers <- p1
+        print(bowlers)
+        selectInput('bowler', 'Choose bowler',choices=bowlers,selected=input$bowler)
+        
+    })
     output$bowlerPlot <- renderPlot({  
-        analyzeT20Bowlers(input$bowler,input$bowlerFunc)
+        analyzeT20Bowlers(input$bowler,input$bowlerFunc,input$country)
         
     })
     

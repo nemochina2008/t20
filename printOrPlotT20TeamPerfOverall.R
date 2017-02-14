@@ -1,12 +1,13 @@
-# ############################################################################################333333
-# Title :  GooglyPlus - An interactive app to analyze IPL Players, teams and matches 
+#########################################################################################################
+#
+# Title :  Inswinger - An interactive app to analyze International T20 Players, teams and matches 
 # Designed and developed by: Tinniam V Ganesh
-# Date : 5 Jan 2016
-# File: printOrPlotIPLTeamPerfOverall
+# Date : 12 Feb 2017
+# File: printOrPlotT20TeamPerfOverall.R
 # More details: https://gigadom.wordpress.com/
 #
 #########################################################################################################
-printOrPlotIPLTeamPerfOverall <- function(input,output){
+printOrPlotT20TeamPerfOverall <- function(input,output){
     # Set the rank of player
     rankValues <- c(1,2,3,4,5,6)
     output$Rank = renderUI({
@@ -16,7 +17,7 @@ printOrPlotIPLTeamPerfOverall <- function(input,output){
     print(input$teamMatches)
     n <- strsplit(as.character(input$teamMatches),"-")
     
-    analyzeIPLTeamPerfOverall(input$teamMatches,input$overallperfFunc,n[[1]][2],input$rank,
+    analyzeT20TeamPerfOverall(input$teamMatches,input$overallperfFunc,n[[1]][2],input$rank,
                               input$plotOrTable2,
                               input$repType2)
     

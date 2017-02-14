@@ -126,12 +126,15 @@ shinyUI(navbarPage("Inswinger : yorkr analyzes International T20 with plots and 
                    ),
                   
                    tabPanel("About",
-                            h3("Inswinger - Analyzing International T20 Players, teams and matches with plots and tables"),
+                            h3("Inswinger - yorkr analyzes International T20 Players, teams and matches"),
                             p("This Shiny app is based on my R package 'yorkr'. In this Shiny app, I use  the
-                    yorkr package to analyze the performances of Intl. T20 cricketers,teams, matches."),
-                            p("The R package 'yorkr' has been authored by Tinniam V Ganesh for analyzing  performances of Intl. T20 cricketers
-                    teams, individudal T20 match, head-to-head and Intl. T20 teamds"),
-                            p("This Shiny app 'GooglyPlus' has been designed and developed by  Tinniam V Ganesh, Dec 25 2016"),
+                    yorkr package to analyze the performances of International T20 cricketers,teams, matches. There are
+                    5 different tabs to analyze individual T20 batsman, T20 bowler, any T20 match, head-to-head
+                    confrontation between any 2 countries and finally the overall T20 performance of any country
+                     against all other countries"),
+                            p("The R package 'yorkr' has been authored by Tinniam V Ganesh for analyzing  ODI, T20 and IPL
+                                  data"),
+                            p("This Shiny app Inswinger has been designed and developed by  Tinniam V Ganesh, Feb 14 2017"),
                             p("The data for this Shiny app has been taken from Cricsheet - http://http://cricsheet.org/"),
                             p("More details about this app and for other posts, see my blog
                     http://gigadom.wordpress.com/")

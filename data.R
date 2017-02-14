@@ -10,8 +10,8 @@
 load("./data/T20Batsmen.RData")
 T20Batsmen <-T20Batsmen
 
-load("./data/T20bowlers.RData")
-T20Bowlers <-T20Bowlers
+#load("./data/T20bowlers.RData")
+#T20Bowlers <-T20Bowlers
 
 a <-list.files("T20Matches/")
 T20Matches <- gsub(".RData","",a)
